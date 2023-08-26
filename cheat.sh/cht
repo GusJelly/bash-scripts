@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "cheat needs one command line argument"
+fi
+
+curl cheat.sh/$1 | less
