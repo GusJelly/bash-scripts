@@ -1,0 +1,4 @@
+#!/bin/sh
+
+input=$(dmenu < /dev/null)
+$input
