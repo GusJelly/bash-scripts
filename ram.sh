@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo $(free -h | awk 'NR==2 {print($4)}')
+echo "Available:" $(free --giga -h | awk 'NR==2 {print($7)}')

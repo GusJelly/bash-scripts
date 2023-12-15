@@ -3,7 +3,7 @@
 c() {
    current=$(pwd)
    cd "$HOME"/.config || exit
-   file=$(fzf --reverse --preview 'bat --color=always {}')
+   file=$(fzf --reverse --preview 'batcat --color=always {}')
 
    if [ -z "$file" ]; then
       cd "$current" || exit
