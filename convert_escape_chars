@@ -1,0 +1,20 @@
+#!/bin/env bash
+
+files=(
+    'Comic Code.otf' 'Comic Code Ligatures Bold Italic.otf' 'Comic Code Ligatures Semibold.otf'
+    'Comic Code Light.otf' 'Comic Code Thin.otf' 'Comic Code Bold.otf'
+    'Comic Code Ligatures Italic.otf' 'Comic Code Ligatures SemiBold Italic.otf'
+    'Comic Code Light Italic.otf' 'Comic Code Thin Italic.otf' 'Comic Code Bold Italic.otf'
+    'Comic Code Ligatures Light.otf' 'Comic Code Ligatures Thin.otf' 'Comic Code Medium.otf'
+    'Comic Code UltraLight.otf' 'Comic Code Italic.otf' 'Comic Code Ligatures Light Italic.otf'
+    'Comic Code Ligatures Thin Italic.otf' 'Comic Code Medium Italic.otf'
+    'Comic Code UltraLight Italic.otf' 'Comic Code Ligatures.otf' 'Comic Code Ligatures Medium.otf'
+    'Comic Code Ligatures UltraLight.otf' 'Comic Code Semibold.otf'
+    'Comic Code Ligatures Bold.otf' 'Comic Code Ligatures Medium Italic.otf'
+    'Comic Code Ligatures UltraLight Italic.otf' 'Comic Code Semibold Italic.otf'
+)
+
+for file in "${files[@]}"; do
+    escaped_file=$(echo "$file" | sed 's/ /\\ /g')
+    echo "$escaped_file"
+done
